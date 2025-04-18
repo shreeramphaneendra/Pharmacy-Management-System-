@@ -19,7 +19,7 @@ vector<medicine> uploadfile()
     if(!infile)
     {
         cout<<" ERROR file not opening ";
-        return;
+        return meds;
     }
     while(infile>>m.id>>m.name>>m.quantity>>m.expDate>>m.price)
     {
