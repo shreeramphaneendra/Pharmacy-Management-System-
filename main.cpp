@@ -25,6 +25,6 @@ vector<medicine> uploadfile()
     {
         meds.push_back(m);
     }
-    inflie.close();
+    infile.close();
     return meds;
 }
