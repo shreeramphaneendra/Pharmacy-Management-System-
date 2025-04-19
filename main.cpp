@@ -28,3 +28,16 @@ vector<medicine> uploadfile()
     infile.close();
     return meds;
 }
+void searchName(vector<medicine> &med,string medname)
+{
+    for(medicine &m:med)
+    {
+        if(m.name==medname)
+        {
+            cout << "Medicine Found:\n";
+            cout << "ID: " << m.id << "\nName: " << m.name << "\nQuantity: " << m.quantity<< "\nExpiry: " << m.expDate << "\nPrice: " << m.price << endl;
+            return;
+        }
+    }
+    cout<<"medicine out of stock";
+}
