@@ -40,5 +40,4 @@ void searchName(vector<medicine> &med,string medname)
         }
     }
     cout<<"medicine out of stock";
-}
-s
+} 
