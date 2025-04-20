@@ -1,3 +1,4 @@
+//  Created by Shreeram Majeti on 15/04/25.
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -54,3 +55,4 @@ void searchId(vector<medicine>& med,int id)
     }
     cout<<"medicine out of stock";
 }
+
