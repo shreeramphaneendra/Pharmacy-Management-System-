@@ -42,4 +42,15 @@ void searchName(vector<medicine> &med,string medname)
     cout<<"medicine out of stock";
 } 
 void searchId(vector<medicine>& med,int id)
-
+{
+    for(medicine &m:med)
+    {
+        if(m.id==id)
+        {
+            cout << "Medicine Found:\n";
+            cout << "ID: " << m.id << "\nName: " << m.name << "\nQuantity: " << m.quantity<< "\nExpiry: " << m.expDate << "\nPrice: " << m.price << endl;
+            return;
+        }
+    }
+    cout<<"medicine out of stock";
+}
