@@ -57,4 +57,20 @@ void searchId(vector<medicine>& med,int id)
     }
     cout<<"medicine out of stock";
 }
-
+void searchCategory(const vector<medicine>& meds, const string& category)
+{
+    bool found = false;
+    for(medicine m :meds)
+    {
+        if (m.category == category)
+        {
+            cout << "ID: " << m.id << " Name: " << m.name << " Qty: " << m.quantity
+                             << " Exp: " << m.expDate << " Price: " << m.price << endl;
+                        found = true;
+        }
+    }
+    if(!found)
+    {
+        cout<<"medicines out of stock";
+    }
+}
