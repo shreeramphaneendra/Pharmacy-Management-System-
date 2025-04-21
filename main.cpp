@@ -4,14 +4,16 @@
 #include <vector>
 using namespace std;
 
-class medicine {
-public:
-    string name;
-    int expDate;
-    int quantity;
-    float price;
-    int id;
-};
+class medicine 
+{
+    public:
+        string name;
+        int expDate;
+        int quantity;
+        float price;
+        int id;
+        string category;
+    };
 vector<medicine> uploadfile()
 {
     ifstream infile("/Users/shreeramssp/Desktop/inventorypharamacy.txt");
