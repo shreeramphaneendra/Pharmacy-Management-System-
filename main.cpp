@@ -31,32 +31,21 @@ vector<medicine> uploadfile()
     infile.close();
     return meds;
 }
-void searchName(vector<medicine> &med,string medname)
-{
-    for(medicine &m:med)
-    {
-        if(m.name==medname)
-        {
-            cout << "Medicine Found:\n";
-            cout << "ID: " << m.id << "\nName: " << m.name << "\nQuantity: " << m.quantity<< "\nExpiry: " << m.expDate << "\nPrice: " << m.price << endl;
-            return;
-        }
+medicine* searchName(vector<medicine>& medList, const string& medname) {
+    for (medicine& m : medList) {
+        if (m.name == medname)
+            return &m;
     }
-    cout<<"medicine out of stock";
-} 
-void searchId(vector<medicine>& med,int id)
-{
-    for(medicine &m:med)
-    {
-        if(m.id==id)
-        {
-            cout << "Medicine Found:\n";
-            cout << "ID: " << m.id << "\nName: " << m.name << "\nQuantity: " << m.quantity<< "\nExpiry: " << m.expDate << "\nPrice: " << m.price << endl;
-            return;
-        }
-    }
-    cout<<"medicine out of stock";
+    return nullptr;
 }
+medicine* searchId(vector<medicine>& medList, int id) {
+    for (medicine& m : medList) {
+        if (m.id == id)
+            return &m;
+    }
+    return nullptr;
+}
+
 void searchCategory(const vector<medicine>& meds, const string& category)
 {
     bool found = false;
