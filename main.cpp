@@ -63,3 +63,13 @@ void searchCategory(const vector<medicine>& meds, const string& category)
         cout<<"medicines out of stock";
     }
 }
+void updateStock(medicine &m,int number)
+{
+    m.quantity-=number;
+    
+    if(m.quantity<0)
+    {
+        m.quantity=0;
+    }
+    
+}
