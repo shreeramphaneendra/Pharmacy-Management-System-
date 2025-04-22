@@ -73,3 +73,15 @@ void updateStock(medicine &m,int number)
     }
     
 }
+void saveInventory(const vector<medicine>& meds)
+{
+    ofstream out("/Users/shreeramssp/Desktop/inventorypharamacy.txt");
+    for (medicine m : meds)
+    {
+        out << m.id << " "
+            << m.name << " "
+            << m.quantity << " "
+            << m.expDate << " "
+            << m.price << "\n";
+    }
+}
