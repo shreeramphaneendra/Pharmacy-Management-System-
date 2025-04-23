@@ -79,9 +79,10 @@ void saveInventory(const vector<medicine>& meds)
     for (medicine m : meds)
     {
         out << m.id << " "
-            << m.name << " "
-            << m.quantity << " "
-            << m.expDate << " "
-            << m.price << "\n";
+        << m.name << " "
+        << m.quantity << " "
+        << m.expDate << " "
+        << m.price <<" "
+        <<m.category<<"\n";
     }
 }
