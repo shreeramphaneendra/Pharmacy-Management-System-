@@ -86,3 +86,12 @@ void saveInventory(const vector<medicine>& meds)
         <<m.category<<"\n";
     }
 }
+void billing(vector<medicine> &meds)
+{
+    float total =0.0;
+    char choice;
+    do
+    {
+        
+    }while(choice=='y'||choice=='Y');
+}
