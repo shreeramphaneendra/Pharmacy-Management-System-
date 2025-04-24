@@ -124,4 +124,9 @@ void billing(vector<medicine> &meds)
                 cin >> choice;
 
     } while (choice == 'y' || choice == 'Y');
+    cout << "\n======= Final Bill =======\n";
+        cout << "Total amount: ₹" << total << "\n";
+        cout << "==========================\n";
+
+    saveInventory(meds);
 }
