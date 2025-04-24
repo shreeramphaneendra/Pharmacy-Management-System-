@@ -98,30 +98,30 @@ void billing(vector<medicine> &meds)
         medicine *m=searchName(meds,name);
         if (m)
         {
-                    int qty;
-                    cout << "Enter quantity: ";
-                    cin >> qty;
+            int qty;
+            cout << "Enter quantity: ";
+            cin >> qty;
 
-                    if (m->quantity >= qty)
-                    {
-                        float cost = qty * m->price;
-                        total += cost;
+            if (m->quantity >= qty)
+            {
+                float cost = qty * m->price;
+                total += cost;
 
-                        updateStock(*m, qty);
-                        cout << "Added to bill: " << m->name << " x" << qty << " = ₹" << cost << "\n";
-                    }
-                else
-                {
-                        cout << "Only " << m->quantity << " units available.\n";
-                }
+                updateStock(*m, qty);
+                cout << "Added to bill: " << m->name << " x" << qty << " = ₹" << cost << "\n";
+             }
+            else
+            {
+                cout << "Only " << m->quantity << " units available.\n";
+            }
         }
-             else
-                {
-                    cout << "Medicine not found.\n";
-                }
+        else
+        {
+            cout << "Medicine not found.\n";
+        }
 
-                cout << "Do you want to buy another medicine? (y/n): ";
-                cin >> choice;
+        cout << "Do you want to buy another medicine? (y/n): ";
+         cin >> choice;
 
     } while (choice == 'y' || choice == 'Y');
     
