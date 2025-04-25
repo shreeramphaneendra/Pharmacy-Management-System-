@@ -131,3 +131,7 @@ void billing(vector<medicine> &meds)
 
     saveInventory(meds);
 }
+int main()
+{
+    
+}
