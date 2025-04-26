@@ -133,5 +133,6 @@ void billing(vector<medicine> &meds)
 }
 int main()
 {
+    uploadfile();
     
 }
