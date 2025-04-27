@@ -153,11 +153,58 @@ int main()
         cout << "---------------------------------\n";
         cout << "Enter your choice: ";
         cin >> choice;
-        switch (choice) {
+        switch (choice) 
+        {
             case 1: {
                 int id;
                 cout << "Enter ID to search: ";
                 cin >> id;
                 medicine* m = searchId(meds, id);
-     }
+                if (m) {
+                    cout << "\n--- Medicine Details ---\n";
+                    cout << "ID: " << m->id << "\nName: " << m->name << "\nQuantity: " << m->quantity
+                         << "\nExpiry: " << m->expDate << "\nPrice: ₹" << m->price << "\nCategory: " << m->category << "\n";
+                } else {
+                    cout << "Medicine not found.\n";
+                }
+                break;
+            }
+
+            case 2: {
+                string name;
+                cout << "Enter Name to search: ";
+                cin >> name;
+                medicine* m = searchName(meds, name);
+                if (m) {
+                    cout << "\n--- Medicine Details ---\n";
+                    cout << "ID: " << m->id << "\nName: " << m->name << "\nQuantity: " << m->quantity
+                         << "\nExpiry: " << m->expDate << "\nPrice: ₹" << m->price << "\nCategory: " << m->category << "\n";
+                } else {
+                    cout << "Medicine not found.\n";
+                }
+                break;
+            }
+
+            case 3: {
+                string category;
+                cout << "Enter Category to search: ";
+                cin >> category;
+                searchCategory(meds, category);
+                break;
+            }
+
+            case 4:
+                billing(meds);
+                break;
+
+            case 5:
+                cout << "Thank you for using Pharmacy System. Goodbye!\n";
+                return 0;
+                break;
+
+            default:
+                cout << "Invalid choice. Please select a valid option.\n";
+        }
+    }
 }
+
