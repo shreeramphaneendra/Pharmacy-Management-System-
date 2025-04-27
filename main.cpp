@@ -153,5 +153,11 @@ int main()
         cout << "---------------------------------\n";
         cout << "Enter your choice: ";
         cin >> choice;
+        switch (choice) {
+            case 1: {
+                int id;
+                cout << "Enter ID to search: ";
+                cin >> id;
+                medicine* m = searchId(meds, id);
      }
 }
