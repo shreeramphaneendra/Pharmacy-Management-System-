@@ -133,6 +133,25 @@ void billing(vector<medicine> &meds)
 }
 int main()
 {
-    uploadfile();
-    
+    vector<medicine> meds=uploadfile();
+     if (meds.empty())
+     {
+        cout << "Inventory is empty. Exiting program.\n";
+        return 0;
+     }
+     int choice;
+     while(1)
+     {
+        cout << "\n=================================\n";
+        cout << "     Pharmacy Inventory System\n";
+        cout << "=================================\n";
+        cout << "1. Search Medicine by ID\n";
+        cout << "2. Search Medicine by Name\n";
+        cout << "3. Search Medicine by Category\n";
+        cout << "4. Purchase Medicines (Billing)\n";
+        cout << "5. Exit\n";
+        cout << "---------------------------------\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+     }
 }
