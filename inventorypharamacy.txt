@@ -1,3 +1,5 @@
+ID NAME QUANTITY EXPDATE PRICE CATEGORY
+
 200 paracetamol 285 202702 261 analgesic
 201 ibuprofen 406 202722 242 analgesic
 202 amoxicillin 348 202721 113 antibiotic
